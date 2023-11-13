@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.17rem;
+}
+
+body{
+    background-image: url('../slike/pocetna.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 100vh;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    color: white;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+nav ul {
+    list-style-type: none;
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+main{
+    height: 90vh;
+    align-items: left;
+    color: rgb(3 7 18);
+}
+
+h1{
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-bottom: 1.2rem;
+}
+
+main.pocetna{
+    margin-top: 12rem;
+    margin-left: 15rem;
+}
+
+
+main.pocetna h4{
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.dugme{
+    text-decoration: none;
+    color: white;
+    padding: 1rem 7rem;
+    background-color: #4ade80;
+    font-size: 1.2rem;
+    border-radius: 3.125rem;
+    border: none;
+}
+
+.active{
+    border-bottom: 0.2rem solid white;
+    padding-bottom: 0.5rem;
+}
+
+main.kontakt{
+    margin-top: 5rem;
+    margin-left: 12rem;
+}
+
+.kontakt-forma{
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    border-radius: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.kontakt-forma h1{
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.kontakt-forma label:not(.radio-label)
+{
+    color: #b3b3b3;
+    align-items: self-start;
+}
+
+input, textarea{
+    width: 80%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    resize: none;
+    border-style: none ;
+    border-bottom: 0.125rem solid #b3b3b3;
+}
+
+input:focus, 
+textarea:focus{
+    outline: none; /*sklanja neobjasnjivi autlajn koji se javlja na fokus*/
+    border-bottom: 0.125rem solid #4ade80;
+}
+
+.radioDugmad
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.radioDugmad p{
+    color: #b3b3b3;
+}
+
+.radioDugme
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2rem;
+    padding-left: 2rem;
+}
+
+/* Stavlja radio button i label u isti red, inace ima mali gap*/
+label {
+    float: left;
+    clear: none;
+    display: block;
+    padding: 0px 1em 0px 8px;
+  }
+  
+input[type=radio],
+input.radio {
+    float: left;
+    clear: none;
+    margin: 2px 0 0 2px;
+}
+
+.kontakt-forma .dugme{
+    margin-top: 2rem;
+}
+
+
+
+ 
