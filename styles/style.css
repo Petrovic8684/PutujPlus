@@ -77,8 +77,9 @@ main.pocetna h4{
 }
 
 main.kontakt{
-    margin-top: 5rem;
-    margin-left: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .kontakt-forma{
@@ -162,6 +163,65 @@ input.radio {
     margin-top: 2rem;
 }
 
+main.destinacije{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+main.destinacije h3{
+    font-size: 1.7rem;
+    margin-bottom: 4rem;
+}
 
- 
+main.destinacije h4{
+    font-size: 1.3rem;
+    background-color: white;
+    border-radius: 50px;
+    padding: 0.3rem 0.5rem;
+}
+
+.kartice{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+}
+
+.kartica{
+    width: 20rem;
+    height: 12rem;
+    background-color: #4ade80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#pariz{
+    background-image: url(../slike/destinacije/pariz.jpg);
+}
+
+#majami{
+    background-image: url(../slike/destinacije/majami.jpg);
+}
+
+#piza{
+    background-image: url(../slike/destinacije/piza.jpg);
+}
+
+#sejseli{
+    background-image: url(../slike/destinacije/sejseli.jpg);
+}
+
+#prag{
+    background-image: url(../slike/destinacije/prag.jpg);
+}
+
+#brazil{
+    background-image: url(../slike/destinacije/brazil.jpg);
+}
