@@ -159,14 +159,14 @@ nav .burger div {
   justify-content: center;
   align-items: center;
   height: 92vh;
-  position: relative;
-  bottom: 20%;
 }
 
 .landing .naslovi h1 {
   font-size: 55px;
   font-weight: 600;
   line-height: 75px;
+  position: relative;
+  bottom: 10%;
 }
 
 .landing .naslovi h4 {
@@ -174,7 +174,7 @@ nav .burger div {
   font-weight: 300;
   line-height: 30px;
   position: relative;
-  top: 1%;
+  bottom: 7%;
 }
 
 .razlozi .naslovi {
@@ -391,7 +391,7 @@ nav .burger div {
 /* KONTAKT */
 
 .kontakt {
-  background-image: url("../slike/pocetna.jpg");
+  background-image: url("../slike/kontakt.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -417,13 +417,13 @@ nav .burger div {
   justify-content: center;
   align-items: center;
   height: 92vh;
-  position: relative;
-  bottom: 20%;
 }
 
 .kontakt .naslovi h1 {
   font-size: 55px;
   font-weight: 600;
+  position: relative;
+  bottom: 10%;
 }
 
 .lokacija {
