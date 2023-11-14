@@ -1,227 +1,526 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Lato', sans-serif;
-    letter-spacing: 0.17rem;
+:root {
+  --siva: rgb(31 41 55);
+  --tamnoplava: #1f2937;
+  --zelena: rgb(74 222 128);
+  --plava: rgb(96 165 250);
+  --roze: rgb(251 113 133);
 }
 
-body{
-    background-image: url('../slike/pocetna.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 10vh;
-    color: white;
-    font-weight: 700;
-    font-size: 1.6rem;
+body {
+  height: 100vh;
 }
 
-nav ul {
-    list-style-type: none;
-    width: 35%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* NAVBAR + BURGER MENI */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  position: relative;
+  z-index: 1;
 }
 
-nav ul li a{
-    color: white;
-    text-decoration: none;
+nav .logo {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 25px;
 }
 
-main{
-    height: 90vh;
-    align-items: left;
-    color: rgb(3 7 18);
+nav .nav-linkovi {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
 }
 
-h1{
-    font-size: 3rem;
-    line-height: 4rem;
-    margin-bottom: 1.2rem;
+nav .nav-linkovi li {
+  list-style-type: none;
 }
 
-main.pocetna{
-    margin-top: 12rem;
-    margin-left: 15rem;
+nav .nav-linkovi a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
-
-main.pocetna h4{
-    font-size: 1.5rem;
-    margin-bottom: 5rem;
+nav .burger {
+  display: none;
+  cursor: pointer;
 }
 
-.dugme{
-    text-decoration: none;
-    color: white;
-    padding: 1rem 7rem;
-    background-color: #4ade80;
-    font-size: 1.2rem;
-    border-radius: 3.125rem;
-    border: none;
+nav .burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
 }
 
-.active{
-    border-bottom: 0.2rem solid white;
-    padding-bottom: 0.5rem;
-}
-
-main.kontakt{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.kontakt-forma{
-    background-color: white;
-    width: 80%;
-    height: 80%;
-    border-radius: 30px;
-}
-
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 2rem;
-}
-
-.kontakt-forma h1{
-    width: 100%;
-    text-align: center;
-    padding: 1.5rem;
-}
-
-.kontakt-forma label:not(.radio-label)
-{
-    color: #b3b3b3;
-    align-items: self-start;
-}
-
-input, textarea{
-    width: 80%;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    resize: none;
-    border-style: none ;
-    border-bottom: 0.125rem solid #b3b3b3;
-}
-
-input:focus, 
-textarea:focus{
-    outline: none; /*sklanja neobjasnjivi autlajn koji se javlja na fokus*/
-    border-bottom: 0.125rem solid #4ade80;
-}
-
-.radioDugmad
-{
-    display: flex;
-    flex-direction: row;
-}
-
-.radioDugmad p{
-    color: #b3b3b3;
-}
-
-.radioDugme
-{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    line-height: 1.2rem;
-    padding-left: 2rem;
-}
-
-/* Stavlja radio button i label u isti red, inace ima mali gap*/
-label {
-    float: left;
-    clear: none;
-    display: block;
-    padding: 0px 1em 0px 8px;
+@media screen and (max-width: 1280px) {
+  nav .nav-linkovi {
+    width: 60%;
   }
-  
-input[type=radio],
-input.radio {
-    float: left;
-    clear: none;
-    margin: 2px 0 0 2px;
 }
 
-.kontakt-forma .dugme{
-    margin-top: 2rem;
-}
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
 
-main.destinacije{
-    width: 100vw;
+  nav .nav-linkovi {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    background-color: var(--tamnoplava);
+  }
+
+  nav .nav-linkovi li {
+    opacity: 0;
+  }
+
+  nav .burger {
+    display: block;
+    position: relative;
+  }
 }
 
-main.destinacije h3{
-    font-size: 1.7rem;
-    margin-bottom: 4rem;
+.nav-active {
+  transform: translateX(0%);
 }
 
-main.destinacije h4{
-    font-size: 1.3rem;
-    background-color: white;
-    border-radius: 50px;
-    padding: 0.3rem 0.5rem;
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
-.kartice{
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto auto;
-    gap: 2rem;
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-.kartica{
-    width: 20rem;
-    height: 12rem;
-    background-color: #4ade80;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-size: cover;
-    background-repeat: no-repeat;
+.toggle .line2 {
+  opacity: 0;
 }
 
-#pariz{
-    background-image: url(../slike/destinacije/pariz.jpg);
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
-#majami{
-    background-image: url(../slike/destinacije/majami.jpg);
+/* POCETNA */
+
+.landing {
+  background-image: url("../slike/pocetna.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
 }
 
-#piza{
-    background-image: url(../slike/destinacije/piza.jpg);
+.landing::after {
+  content: "";
+  background-color: rgba(59, 59, 59, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
-#sejseli{
-    background-image: url(../slike/destinacije/sejseli.jpg);
+.landing .naslovi {
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 92vh;
+  position: relative;
+  bottom: 20%;
 }
 
-#prag{
-    background-image: url(../slike/destinacije/prag.jpg);
+.landing .naslovi h1 {
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 75px;
 }
 
-#brazil{
-    background-image: url(../slike/destinacije/brazil.jpg);
+.landing .naslovi h4 {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  position: relative;
+  top: 1%;
+}
+
+.razlozi .naslovi {
+  height: 30vh;
+  color: var(--siva);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.razlozi .naslovi h4 {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 5px;
+}
+
+.razlozi .naslovi h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.razlozi .sadrzaj {
+  height: 70vh;
+  color: var(--siva);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+}
+
+.razlozi .sadrzaj img {
+  border-radius: 500px;
+}
+
+.razlozi .sadrzaj img#prva {
+  width: 350px;
+  height: 510px;
+
+  position: relative;
+  right: 40px;
+  bottom: 50px;
+  z-index: -1;
+}
+
+.razlozi .sadrzaj img#druga {
+  width: 280px;
+  height: 420px;
+  position: relative;
+  top: 30px;
+  right: -30px;
+  border: 10px solid white;
+}
+
+.razlozi .sadrzaj .sekcije .sekcija {
+  margin-bottom: 25px;
+}
+
+.razlozi .sadrzaj .sekcije .sekcija > * {
+  margin-bottom: 10px;
+}
+
+.razlozi .sadrzaj .sekcije .sekcija h3 {
+  color: white;
+  padding: 3px 7px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+}
+
+.razlozi .sadrzaj .sekcije .sekcija h4 {
+  font-size: 25px;
+  color: var(--siva);
+}
+
+.razlozi .sadrzaj .sekcije .sekcija h5 {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--siva);
+}
+
+.razlozi .sadrzaj .sekcije .sekcija #prvi {
+  background-color: var(--zelena);
+}
+
+.razlozi .sadrzaj .sekcije .sekcija #drugi {
+  background-color: var(--plava);
+}
+
+.razlozi .sadrzaj .sekcije .sekcija #treci {
+  background-color: var(--roze);
+}
+
+.iskazi {
+  width: 80%;
+  height: 65vh;
+  margin: auto;
+  color: var(--siva);
+}
+
+.iskazi h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 70px;
+}
+
+.iskazi .sekcije {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.iskazi .sekcije .sekcija {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  padding: 20px 50px 50px 50px;
+  border-radius: 30px;
+  background-color: rgb(226 232 240);
+  position: relative;
+}
+
+.iskazi .sekcije .sekcija .gore {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.iskazi .sekcije .sekcija .gore .slika img {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+}
+
+.iskazi .sekcije .sekcija .gore .slika svg {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -50px;
+  right: 30px;
+}
+
+.iskazi .sekcije .sekcija .gore .podaci {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+}
+
+.iskazi .sekcije .sekcija .gore .podaci h4 {
+  font-size: 26px;
+}
+
+.iskazi .sekcije .sekcija .gore .podaci h5,
+.iskazi .sekcije .sekcija .dole p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.futer {
+  color: white;
+  height: 50vh;
+  background-color: var(--tamnoplava);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.futer h4 {
+  text-transform: uppercase;
+  font-size: 26px;
+}
+
+.futer h4 svg {
+  width: 40px;
+  height: 40px;
+  margin-block: 20px;
+  margin-inline: 10px;
+}
+
+.futer .futer-dno .social .ikonice svg {
+  width: 25px;
+  height: 25px;
+  margin-block: 20px;
+  margin-inline: 10px;
+}
+
+.futer h5 {
+  font-size: 16px;
+  font-weight: 300;
+  margin-block: 20px;
+}
+
+.futer h5#futer-pasus {
+  width: 45%;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.futer .futer-dno {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* KONTAKT */
+
+.kontakt {
+  background-image: url("../slike/pocetna.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+}
+
+.kontakt::after {
+  content: "";
+  background-color: rgba(59, 59, 59, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.kontakt .naslovi {
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 92vh;
+  position: relative;
+  bottom: 20%;
+}
+
+.kontakt .naslovi h1 {
+  font-size: 55px;
+  font-weight: 600;
+}
+
+.lokacija {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 60px;
+  margin: auto;
+  width: 70%;
+  height: 70vh;
+  color: var(--siva);
+}
+
+.lokacija .sadrzaj h1 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.lokacija .sadrzaj p {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.lokacija .mapa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forma {
+  height: 80vh;
+  color: var(--siva);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+.forma h1 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.forma form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 75%;
+  padding-top: 32px;
+}
+
+.forma form input,
+.forma form textarea {
+  width: 80%;
+  margin-bottom: 16px;
+  padding: 16px;
+  resize: none;
+  border-style: none;
+  border-bottom: 2px solid #b3b3b3;
+}
+
+.forma form input:focus,
+.forma form textarea:focus {
+  outline: none;
+  border-bottom: 2px solid var(--plava);
+}
+
+.forma form .radioDugmad {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 70px;
+}
+
+.forma form .radioDugmad .radioDugme {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  line-height: 19.2px;
+  padding-left: 32px;
+}
+
+/* Stavlja radio button i label u isti red */
+.forma form .radioDugmad .radioDugme label {
+  float: left;
+  clear: none;
+  display: block;
+  padding: 0px 0px 12px 10px;
+}
+
+.forma form button {
+  color: white;
+  font-size: 16px;
+  background-color: var(--tamnoplava);
+  border: none;
+  border-radius: 30px;
+  padding: 15px 80px;
 }
