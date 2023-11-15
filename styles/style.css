@@ -135,7 +135,8 @@ nav .burger div {
 
 .futer {
   color: white;
-  height: 50vh;
+  height: fit-content;
+  padding-block: 50px;
   background-color: var(--tamnoplava);
   display: flex;
   flex-direction: column;
@@ -235,7 +236,8 @@ nav .burger div {
 }
 
 .razlozi .naslovi {
-  height: 30vh;
+  height: fit-content;
+  margin-block: 60px;
   color: var(--siva);
   display: flex;
   flex-direction: column;
@@ -256,7 +258,8 @@ nav .burger div {
 }
 
 .razlozi .sadrzaj {
-  height: 70vh;
+  height: fit-content;
+  margin-bottom: 50px;
   color: var(--siva);
   display: flex;
   justify-content: space-evenly;
@@ -330,15 +333,15 @@ nav .burger div {
 
 .iskazi {
   width: 80%;
-  height: 65vh;
-  margin: auto;
+  height: fit-content;
+  margin: auto auto 100px auto;
   color: var(--siva);
 }
 
 .iskazi h1 {
   font-size: 40px;
   font-weight: 600;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
 }
 
 .iskazi .sekcije {

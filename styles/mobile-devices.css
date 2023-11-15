@@ -1,3 +1,19 @@
+/* LAPTOP PRIKAZ */
+@media screen and (max-width: 1280px) {
+  .razlozi .sadrzaj img {
+    display: none;
+  }
+
+  .razlozi .sadrzaj .sekcije {
+    margin: auto;
+    text-align: center;
+  }
+
+  .razlozi .sadrzaj .sekcije .sekcija h3 {
+    margin: auto auto 10px auto;
+  }
+}
+
 /* MOBILNI PRIKAZ */
 @media screen and (max-width: 768px) {
   .landing .naslovi {
@@ -23,28 +39,13 @@
     font-size: 30px;
   }
 
-  .razlozi .sadrzaj {
-    height: 475px;
-  }
-
-  .razlozi .sadrzaj img {
-    display: none;
-  }
-
   .razlozi .sekcije .sekcija {
     margin-inline: 15px;
-  }
-
-  .iskazi {
-    height: 1100px;
-    width: 85%;
-    margin-bottom: 150px;
   }
 
   .iskazi h1 {
     text-align: center;
     font-size: 30px;
-    margin-bottom: 120px;
   }
 
   .iskazi .sekcije {
@@ -58,12 +59,9 @@
     right: 10px;
   }
 
-  .futer {
-    height: 700px;
-  }
-
   .futer h5#futer-pasus {
     width: 70%;
+    min-width: 300px;
   }
 
   .futer .futer-dno {
