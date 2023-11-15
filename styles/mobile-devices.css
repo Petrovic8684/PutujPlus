@@ -20,7 +20,7 @@
   }
 
   .razlozi .sadrzaj {
-    height: 60vh;
+    height: 475px;
   }
 
   .razlozi .sadrzaj img {
@@ -32,7 +32,7 @@
   }
 
   .iskazi {
-    height: 140vh;
+    height: 1100px;
     width: 85%;
   }
 
@@ -47,8 +47,14 @@
     gap: 75px;
   }
 
+  .iskazi .sekcije .sekcija .gore .slika svg {
+    width: 80px;
+    height: 80px;
+    right: 10px;
+  }
+
   .futer {
-    height: 100vh;
+    height: 700px;
   }
 
   .futer h5#futer-pasus {
