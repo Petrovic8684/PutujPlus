@@ -15,6 +15,10 @@
     display: none;
   }
 
+  .razlozi .naslovi {
+    margin-inline: 15px;
+  }
+
   .razlozi .naslovi h1 {
     font-size: 30px;
   }
@@ -32,9 +36,9 @@
   }
 
   .iskazi {
-    height: 1100px;
+    height: 900px;
     width: 85%;
-    margin-bottom: 50px;
+    margin-bottom: 150px;
   }
 
   .iskazi h1 {
