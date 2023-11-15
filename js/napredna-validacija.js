@@ -28,7 +28,7 @@ forma.addEventListener("submit", (e) => {
 
   // Ispis uspesno popunjene forme
   alert(
-    "Vaša poruka je zabeležena i čeka obradu naših administratora. Uneli ste sledeće podatke:\n" +
+    "Vaša poruka je zabeležena i čeka obradu naših administratora. Uneli ste sledeće podatke:\n\n" +
       "Ime i prezime: " +
       imeiprezime.value +
       "\n" +

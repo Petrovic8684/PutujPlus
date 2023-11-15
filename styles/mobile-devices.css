@@ -20,6 +20,33 @@
   .lokacija .sadrzaj {
     text-align: center;
   }
+
+  .uspomene .sadrzaj .paragraf {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .uspomene .sadrzaj .paragraf#drugi {
+    flex-direction: column-reverse;
+  }
+
+  .uspomene .sadrzaj .paragraf img {
+    border-radius: 30px;
+  }
+
+  .uspomene .sadrzaj .paragraf p svg#gornji,
+  .uspomene .sadrzaj .paragraf p svg#donji {
+    display: none;
+  }
+
+  .kosmomi .sadrzaj p {
+    margin-inline: 25px;
+  }
+
+  .kosmomi .sadrzaj img {
+    width: 80vw;
+    height: 49.72vw;
+  }
 }
 
 /* MOBILNI PRIKAZ */
@@ -29,6 +56,7 @@
   }
 
   .landing .naslovi,
+  .onama .naslovi,
   .destinacije .naslovi,
   .kontakt .naslovi {
     align-items: start;
@@ -37,6 +65,7 @@
   }
 
   .landing .naslovi h1,
+  .onama .naslovi h1,
   .destinacije .naslovi h1,
   .kontakt .naslovi h1 {
     font-size: 45px;
@@ -47,11 +76,17 @@
     display: none;
   }
 
-  .razlozi .naslovi {
+  .razlozi .naslovi,
+  .uspomene .naslovi,
+  .kosmomi .naslovi,
+  .kartice .naslovi {
     margin-inline: 15px;
   }
 
-  .razlozi .naslovi h1 {
+  .razlozi .naslovi h1,
+  .uspomene .naslovi h1,
+  .kosmomi .naslovi h1,
+  .kartice .naslovi h1 {
     font-size: 30px;
   }
 
@@ -105,5 +140,10 @@
   .kartice .sekcije {
     grid-template-columns: auto;
     grid-template-rows: repeat("auto", 9);
+  }
+
+  .uspomene .sadrzaj .paragraf img {
+    width: 80vw;
+    height: 100vw;
   }
 }

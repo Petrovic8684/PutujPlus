@@ -192,13 +192,12 @@ nav .burger div {
 
 .landing {
   background-image: url("../slike/pozadine/pocetna.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  z-index: 0;
 }
 
-.landing::after {
+.landing::after,
+.onama::after,
+.destinacije::after,
+.kontakt::after {
   content: "";
   background-color: rgba(59, 59, 59, 0.6);
   position: absolute;
@@ -209,7 +208,18 @@ nav .burger div {
   z-index: -1;
 }
 
+.landing,
+.onama,
+.destinacije,
+.kontakt {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+}
+
 .landing .naslovi,
+.onama .naslovi,
 .destinacije .naslovi,
 .kontakt .naslovi {
   color: white;
@@ -222,6 +232,7 @@ nav .burger div {
 }
 
 .landing .naslovi h1,
+.onama .naslovi h1,
 .destinacije .naslovi h1,
 .kontakt .naslovi h1 {
   font-size: 55px;
@@ -236,6 +247,7 @@ nav .burger div {
 }
 
 .landing .naslovi h4,
+.onama .naslovi h4,
 .destinacije .naslovi h4,
 .kontakt .naslovi h4 {
   font-size: 20px;
@@ -246,6 +258,8 @@ nav .burger div {
 }
 
 .razlozi .naslovi,
+.uspomene .naslovi,
+.kosmomi .naslovi,
 .kartice .naslovi {
   height: fit-content;
   margin-block: 60px;
@@ -258,14 +272,19 @@ nav .burger div {
 }
 
 .razlozi .naslovi h4,
+.uspomene .naslovi h4,
+.kosmomi .naslovi h4,
 .kartice .naslovi h4 {
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
 .razlozi .naslovi h1,
-.razlozi .naslovi h1 {
+.uspomene .naslovi h1,
+.kosmomi .naslovi h1,
+.kartice .naslovi h1 {
   font-size: 40px;
   font-weight: 600;
 }
@@ -413,25 +432,94 @@ nav .burger div {
   font-weight: 300;
 }
 
+/* O NAMA */
+
+.onama {
+  background-image: url("../slike/pozadine/onama.jpg");
+}
+
+.uspomene {
+  height: fit-content;
+}
+
+.uspomene .sadrzaj {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  margin: auto auto 100px auto;
+}
+
+.uspomene .sadrzaj .paragraf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+}
+
+.uspomene .sadrzaj .paragraf img {
+  border-radius: 500px;
+  width: 400px;
+  height: 500px;
+}
+
+.uspomene .sadrzaj .paragraf p,
+.kosmomi .sadrzaj p {
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.uspomene .sadrzaj .paragraf p svg {
+  width: 100px;
+  height: 100px;
+  max-height: 300px;
+  color: var(--plava);
+  position: absolute;
+}
+
+.uspomene .sadrzaj .paragraf p svg#gornji {
+  left: 250px;
+  bottom: -30px;
+  display: inline;
+}
+
+.uspomene .sadrzaj .paragraf p svg#donji {
+  top: 400px;
+  right: 260px;
+  display: inline;
+}
+
+.kosmomi {
+  height: fit-content;
+  margin-bottom: 150px;
+}
+
+.kosmomi .sadrzaj {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.kosmomi .sadrzaj img {
+  width: 846px;
+  height: 480px;
+  border-radius: 30px;
+}
+
+.kosmomi .sadrzaj p {
+  margin-inline: 150px;
+  height: fit-content;
+}
+
 /* DESTINACIJE */
 
 .destinacije {
   background-image: url("../slike/pozadine/destinacije.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  z-index: 0;
-}
-
-.destinacije::after {
-  content: "";
-  background-color: rgba(59, 59, 59, 0.6);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
 }
 
 .kartice {
@@ -452,6 +540,11 @@ nav .burger div {
   justify-content: center;
   align-items: center;
   color: var(--siva);
+  transition: transform 0.2s ease-in;
+}
+
+.kartice .sekcije .sekcija:hover {
+  transform: scale(1.03);
 }
 
 .kartice .sekcije .sekcija img {
@@ -510,21 +603,6 @@ nav .burger div {
 
 .kontakt {
   background-image: url("../slike/pozadine/kontakt.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  z-index: 0;
-}
-
-.kontakt::after {
-  content: "";
-  background-color: rgba(59, 59, 59, 0.6);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
 }
 
 .kontakt .naslovi {
