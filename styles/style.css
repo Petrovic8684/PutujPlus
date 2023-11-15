@@ -17,6 +17,7 @@
 
 body {
   height: 100vh;
+  overflow-x: hidden;
 }
 
 /* NAVBAR + BURGER MENI */
@@ -75,10 +76,6 @@ nav .burger div {
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-
   nav .nav-linkovi {
     position: absolute;
     right: 0px;
@@ -130,6 +127,58 @@ nav .burger div {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
+/* FUTER */
+
+.futer {
+  color: white;
+  height: 50vh;
+  background-color: var(--tamnoplava);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.futer h4 {
+  text-transform: uppercase;
+  font-size: 26px;
+}
+
+.futer h4 svg {
+  width: 40px;
+  height: 40px;
+  margin-block: 20px;
+  margin-inline: 10px;
+}
+
+.futer .futer-dno .social .ikonice svg {
+  width: 25px;
+  height: 25px;
+  margin-block: 20px;
+  margin-inline: 10px;
+}
+
+.futer h5 {
+  font-size: 16px;
+  font-weight: 300;
+  margin-block: 20px;
+}
+
+.futer h5#futer-pasus {
+  width: 45%;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.futer .futer-dno {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* POCETNA */
 
 .landing {
@@ -167,6 +216,10 @@ nav .burger div {
   line-height: 75px;
   position: relative;
   bottom: 10%;
+}
+
+.br-active {
+  display: block;
 }
 
 .landing .naslovi h4 {
@@ -208,6 +261,7 @@ nav .burger div {
 
 .razlozi .sadrzaj img {
   border-radius: 500px;
+  display: inline;
 }
 
 .razlozi .sadrzaj img#prva {
@@ -336,56 +390,6 @@ nav .burger div {
 .iskazi .sekcije .sekcija .dole p {
   font-size: 18px;
   font-weight: 300;
-}
-
-.futer {
-  color: white;
-  height: 50vh;
-  background-color: var(--tamnoplava);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.futer h4 {
-  text-transform: uppercase;
-  font-size: 26px;
-}
-
-.futer h4 svg {
-  width: 40px;
-  height: 40px;
-  margin-block: 20px;
-  margin-inline: 10px;
-}
-
-.futer .futer-dno .social .ikonice svg {
-  width: 25px;
-  height: 25px;
-  margin-block: 20px;
-  margin-inline: 10px;
-}
-
-.futer h5 {
-  font-size: 16px;
-  font-weight: 300;
-  margin-block: 20px;
-}
-
-.futer h5#futer-pasus {
-  width: 45%;
-  font-size: 16px;
-  font-weight: 300;
-  margin-bottom: 50px;
-}
-
-.futer .futer-dno {
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 /* KONTAKT */

@@ -1,0 +1,67 @@
+/* MOBILNI PRIKAZ */
+@media screen and (max-width: 768px) {
+  .landing .naslovi {
+    align-items: start;
+    text-align: left;
+    margin-inline: 15px;
+  }
+
+  .landing .naslovi h1 {
+    font-size: 45px;
+    line-height: 60px;
+  }
+
+  .br-active {
+    display: none;
+  }
+
+  .razlozi .naslovi h1 {
+    font-size: 30px;
+  }
+
+  .razlozi .sadrzaj {
+    height: 60vh;
+  }
+
+  .razlozi .sadrzaj img {
+    display: none;
+  }
+
+  .razlozi .sekcije .sekcija {
+    margin-inline: 15px;
+  }
+
+  .iskazi {
+    height: 140vh;
+    width: 85%;
+  }
+
+  .iskazi h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 120px;
+  }
+
+  .iskazi .sekcije {
+    flex-direction: column;
+    gap: 75px;
+  }
+
+  .futer {
+    height: 100vh;
+  }
+
+  .futer h5#futer-pasus {
+    width: 70%;
+  }
+
+  .futer .futer-dno {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .futer .futer-dno .social {
+    margin-bottom: 40px;
+  }
+}
