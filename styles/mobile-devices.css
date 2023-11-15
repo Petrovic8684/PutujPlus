@@ -12,10 +12,22 @@
   .razlozi .sadrzaj .sekcije .sekcija h3 {
     margin: auto auto 10px auto;
   }
+
+  .lokacija {
+    flex-direction: column-reverse;
+  }
+
+  .lokacija .sadrzaj {
+    text-align: center;
+  }
 }
 
 /* MOBILNI PRIKAZ */
 @media screen and (max-width: 768px) {
+  .landing {
+    background-position: right;
+  }
+
   .landing .naslovi {
     align-items: start;
     text-align: left;
@@ -57,6 +69,11 @@
     width: 80px;
     height: 80px;
     right: 10px;
+  }
+
+  .lokacija .mapa iframe {
+    width: 80vw !important;
+    height: 80vw !important;
   }
 
   .futer h5#futer-pasus {
