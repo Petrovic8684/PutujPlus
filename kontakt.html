@@ -60,15 +60,28 @@
 
       <form action="">
         <label for="imeiprezime">Ime i prezime</label>
-        <input type="text" id="imeiprezime" required />
+        <input type="text" id="imeiprezime" required autocomplete="off" />
         <label for="email">E-mail adresa</label>
-        <input type="email" name="email" id="email" required />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          autocomplete="off"
+        />
         <label for="poruka">Poruka</label>
-        <textarea name="poruka" id="poruka" cols="50" rows="10"></textarea>
+        <textarea
+          name="poruka"
+          id="poruka"
+          cols="50"
+          rows="10"
+          required
+          autocomplete="off"
+        ></textarea>
         <div class="radioDugmad">
           <p>Pol:</p>
           <div class="radioDugme">
-            <input type="radio" name="pol" id="muski" />
+            <input type="radio" name="pol" id="muski" checked />
             <label for="muski" class="radio-label">Muški</label>
           </div>
           <div class="radioDugme">
@@ -159,5 +172,6 @@
     </div>
 
     <script src="js/burger.js"></script>
+    <script src="js/napredna-validacija.js"></script>
   </body>
 </html>
