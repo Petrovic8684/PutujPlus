@@ -29,6 +29,7 @@
   }
 
   .landing .naslovi,
+  .destinacije .naslovi,
   .kontakt .naslovi {
     align-items: start;
     text-align: left;
@@ -36,6 +37,7 @@
   }
 
   .landing .naslovi h1,
+  .destinacije .naslovi h1,
   .kontakt .naslovi h1 {
     font-size: 45px;
     line-height: 60px;
@@ -78,6 +80,11 @@
     height: 80vw !important;
   }
 
+  .kartice .sekcije {
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat("auto", 5);
+  }
+
   .futer h5#futer-pasus {
     width: 70%;
     min-width: 300px;
@@ -91,5 +98,12 @@
 
   .futer .futer-dno .social {
     margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .kartice .sekcije {
+    grid-template-columns: auto;
+    grid-template-rows: repeat("auto", 9);
   }
 }

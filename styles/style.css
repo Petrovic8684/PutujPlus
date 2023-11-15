@@ -191,7 +191,7 @@ nav .burger div {
 /* POCETNA */
 
 .landing {
-  background-image: url("../slike/pocetna.jpg");
+  background-image: url("../slike/pozadine/pocetna.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -210,6 +210,7 @@ nav .burger div {
 }
 
 .landing .naslovi,
+.destinacije .naslovi,
 .kontakt .naslovi {
   color: white;
   text-align: center;
@@ -221,6 +222,7 @@ nav .burger div {
 }
 
 .landing .naslovi h1,
+.destinacije .naslovi h1,
 .kontakt .naslovi h1 {
   font-size: 55px;
   font-weight: 600;
@@ -234,6 +236,7 @@ nav .burger div {
 }
 
 .landing .naslovi h4,
+.destinacije .naslovi h4,
 .kontakt .naslovi h4 {
   font-size: 20px;
   font-weight: 300;
@@ -242,7 +245,8 @@ nav .burger div {
   bottom: 7%;
 }
 
-.razlozi .naslovi {
+.razlozi .naslovi,
+.kartice .naslovi {
   height: fit-content;
   margin-block: 60px;
   color: var(--siva);
@@ -253,12 +257,14 @@ nav .burger div {
   text-align: center;
 }
 
-.razlozi .naslovi h4 {
+.razlozi .naslovi h4,
+.kartice .naslovi h4 {
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 5px;
 }
 
+.razlozi .naslovi h1,
 .razlozi .naslovi h1 {
   font-size: 40px;
   font-weight: 600;
@@ -366,7 +372,7 @@ nav .burger div {
   align-items: space-between;
   padding: 20px 50px 50px 50px;
   border-radius: 30px;
-  background-color: rgb(226 232 240);
+  background-color: rgb(226, 232, 240);
   position: relative;
 }
 
@@ -407,10 +413,103 @@ nav .burger div {
   font-weight: 300;
 }
 
+/* DESTINACIJE */
+
+.destinacije {
+  background-image: url("../slike/pozadine/destinacije.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+}
+
+.destinacije::after {
+  content: "";
+  background-color: rgba(59, 59, 59, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.kartice {
+  height: fit-content;
+}
+
+.kartice .sekcije {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto;
+  row-gap: 100px;
+  margin-bottom: 200px;
+}
+
+.kartice .sekcije .sekcija {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--siva);
+}
+
+.kartice .sekcije .sekcija img {
+  width: 250px;
+  height: 350px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.kartice .sekcije .sekcija h4 {
+  font-size: 25px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.kartice .sekcije .sekcija .drzava {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.kartice .sekcije .sekcija .drzava h5 {
+  font-size: 16px;
+  color: #858585;
+}
+
+.kartice .sekcije .sekcija .drzava svg {
+  width: 30px;
+  height: 30px;
+  color: rgb(197, 39, 0);
+}
+
+.kartice .sekcije .sekcija .cena {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+}
+
+.kartice .sekcije .sekcija .cena h3 {
+  font-weight: 600;
+  font-size: 27px;
+}
+
+.kartice .sekcije .sekcija .cena a {
+  text-decoration: none;
+  color: var(--tamnoplava);
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: rgb(226, 232, 240);
+  border-radius: 15px;
+}
+
 /* KONTAKT */
 
 .kontakt {
-  background-image: url("../slike/kontakt.jpg");
+  background-image: url("../slike/pozadine/kontakt.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
