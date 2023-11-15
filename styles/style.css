@@ -323,6 +323,7 @@ nav .burger div {
 .razlozi .sadrzaj .sekcije .sekcija h5 {
   font-size: 16px;
   font-weight: 300;
+  max-width: 600px;
   color: var(--siva);
 }
 
@@ -499,6 +500,7 @@ nav .burger div {
   resize: none;
   border-style: none;
   border-bottom: 2px solid #b3b3b3;
+  text-align: center;
 }
 
 .forma form input:focus,
