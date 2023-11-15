@@ -24,6 +24,10 @@ body {
   overflow-x: hidden;
 }
 
+.disableYScroll {
+  overflow-y: hidden;
+}
+
 /* NAVBAR + BURGER MENI */
 
 nav {
@@ -105,7 +109,7 @@ nav .burger div {
 }
 
 .nav-active {
-  transform: translateX(0%);
+  transform: translateX(0%) !important;
 }
 
 @keyframes navLinkFade {
@@ -205,7 +209,8 @@ nav .burger div {
   z-index: -1;
 }
 
-.landing .naslovi {
+.landing .naslovi,
+.kontakt .naslovi {
   color: white;
   text-align: center;
   display: flex;
@@ -215,7 +220,8 @@ nav .burger div {
   height: 92vh;
 }
 
-.landing .naslovi h1 {
+.landing .naslovi h1,
+.kontakt .naslovi h1 {
   font-size: 55px;
   font-weight: 600;
   line-height: 75px;
@@ -227,7 +233,8 @@ nav .burger div {
   display: block;
 }
 
-.landing .naslovi h4 {
+.landing .naslovi h4,
+.kontakt .naslovi h4 {
   font-size: 20px;
   font-weight: 300;
   line-height: 30px;
@@ -428,13 +435,6 @@ nav .burger div {
   justify-content: center;
   align-items: center;
   height: 92vh;
-}
-
-.kontakt .naslovi h1 {
-  font-size: 55px;
-  font-weight: 600;
-  position: relative;
-  bottom: 10%;
 }
 
 .lokacija {
