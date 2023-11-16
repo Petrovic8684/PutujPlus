@@ -19,6 +19,7 @@ $(".open-popup-link").magnificPopup({
   type: "inline",
   midClick: true,
   closeOnBgClick: false,
+  fixedContentPos: true,
   callbacks: {
     open: function () {
       resetujTekstZahvale();

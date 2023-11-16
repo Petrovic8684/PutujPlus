@@ -20,7 +20,6 @@
   position: fixed;
   outline: none !important;
   -webkit-backface-visibility: hidden;
-  overflow: auto;
 }
 
 .mfp-container {
