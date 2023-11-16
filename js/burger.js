@@ -5,8 +5,11 @@ const navSlide = () => {
 
   burger.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
+
+    // Disabluje scroll na stranici
     document.body.classList.toggle("disableYScroll");
 
+    // Animira linkove
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
         link.style.animation = "";
@@ -15,6 +18,7 @@ const navSlide = () => {
       }
     });
 
+    // Animira burger ikonicu
     burger.classList.toggle("toggle");
   });
 };
