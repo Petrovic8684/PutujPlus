@@ -7,22 +7,32 @@ var poruka = document.querySelector("#poruka");
 var muski = document.querySelector("#muski");
 var zenski = document.querySelector("#zenski");
 
-let sablonImenaIPrezimena = /[A-Za-z]+\s[A-Za-z]+/i;
+var sablonImenaIPrezimena = /[A-Za-z]+\s[A-Za-z]+/i;
+
+var poljeImeIPrezime = document.querySelector(".forma form input");
+var poljePoruka = document.querySelector(".forma form textarea");
+
+var tekstUpozorenja = document.querySelector(".forma form h5");
 
 forma.addEventListener("submit", (e) => {
   e.preventDefault();
 
   // Provera validnosti polja imeiprezime
   if (!sablonImenaIPrezimena.test(imeiprezime.value)) {
-    alert("Ime i prezime moraju biti u formatu IME(razmak)PREZIME!");
+    tekstUpozorenja.innerHTML =
+      "Ime i prezime moraju biti u formatu IME(razmak)PREZIME!";
+    poljeImeIPrezime.classList.add("upozorenje");
     return;
   }
+  poljeImeIPrezime.classList.remove("upozorenje");
 
   // Provera validnosti polja poruka
   if (poruka.value.length < 20) {
-    alert("Poruka mora imati minimum 20 karaktera!");
+    tekstUpozorenja.innerHTML = "Poruka mora imati minimum 20 karaktera!";
+    poljePoruka.classList.add("upozorenje");
     return;
   }
+  poljePoruka.classList.remove("upozorenje");
 
   var pol = muski.checked ? "Muški" : "Ženski";
 
@@ -41,4 +51,8 @@ forma.addEventListener("submit", (e) => {
       "Pol: " +
       pol
   );
+
+  // Vracanje forme u prvobitno stanje
+  imeiprezime.value = email.value = poruka.value = "";
+  tekstUpozorenja.innerHTML = "";
 });

@@ -1,0 +1,131 @@
+.kontakt {
+  background-image: url("../slike/pozadine/kontakt.jpg");
+}
+
+.kontakt .naslovi {
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 92vh;
+}
+
+.lokacija {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 60px;
+  margin: 100px auto 100px auto;
+  width: 70%;
+  height: fit-content;
+  color: var(--siva);
+}
+
+.lokacija .sadrzaj h1 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.lokacija .sadrzaj p {
+  font-size: 20px;
+  font-weight: 300;
+  max-height: 100px;
+}
+
+.lokacija .mapa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forma {
+  height: fit-content;
+  margin-block: 100px;
+  color: var(--siva);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+.forma h1 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.forma form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 75%;
+  padding-top: 32px;
+}
+
+.forma form input,
+.forma form textarea {
+  width: 80%;
+  margin-bottom: 16px;
+  padding: 16px;
+  resize: none;
+  border-style: none;
+  border-bottom: 2px solid #b3b3b3;
+  text-align: center;
+}
+
+.upozorenje {
+  border-bottom: 2px solid red !important;
+}
+
+.zvezdica {
+  color: red;
+}
+
+.forma form input:focus,
+.forma form textarea:focus {
+  outline: none;
+  border-bottom: 2px solid var(--plava);
+}
+
+.forma form .radioDugmad {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.forma form h5 {
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  color: red;
+}
+
+.forma form .radioDugmad .radioDugme {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  line-height: 19.2px;
+  padding-left: 32px;
+}
+
+/* Stavlja radio button i label u isti red */
+.forma form .radioDugmad .radioDugme label {
+  float: left;
+  clear: none;
+  display: block;
+  padding: 0px 0px 12px 10px;
+}
+
+.forma form button {
+  color: white;
+  font-size: 16px;
+  background-color: var(--tamnoplava);
+  border: none;
+  border-radius: 30px;
+  padding: 15px 80px;
+}

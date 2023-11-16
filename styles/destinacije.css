@@ -1,0 +1,141 @@
+.destinacije {
+  background-image: url("../slike/pozadine/destinacije.jpg");
+}
+
+.kartice {
+  height: fit-content;
+}
+
+.kartice .sekcije {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto;
+  row-gap: 100px;
+  margin-bottom: 200px;
+}
+
+.kartice .sekcije .sekcija {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--siva);
+  transition: transform 0.2s ease-in;
+}
+
+.kartice .sekcije .sekcija:hover {
+  transform: scale(1.03);
+}
+
+.kartice .sekcije .sekcija img {
+  width: 250px;
+  height: 350px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.kartice .sekcije .sekcija h4 {
+  font-size: 25px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.kartice .sekcije .sekcija .drzava {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.kartice .sekcije .sekcija .drzava h5 {
+  font-size: 16px;
+  color: #858585;
+}
+
+.kartice .sekcije .sekcija .drzava svg {
+  width: 30px;
+  height: 30px;
+  color: rgb(197, 39, 0);
+}
+
+.kartice .sekcije .sekcija .cena {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+}
+
+.kartice .sekcije .sekcija .cena h3 {
+  font-weight: 600;
+  font-size: 27px;
+}
+
+.kartice .sekcije .sekcija .cena a {
+  text-decoration: none;
+  color: var(--tamnoplava);
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: rgb(226, 232, 240);
+  border-radius: 15px;
+}
+
+/* POPUP MODAL */
+
+.white-popup {
+  position: relative;
+  bottom: 100px;
+  background: #fff;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+#destinacija-popup {
+  color: var(--siva);
+}
+
+#destinacija-popup h1 {
+  text-align: center;
+  margin-block: 20px;
+}
+
+#destinacija-popup .upit h4 {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#destinacija-popup .upit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#destinacija-popup .upit > * {
+  margin-block: 22px;
+}
+
+#destinacija-popup .upit .brOsoba,
+#destinacija-popup .upit .datumOd,
+#destinacija-popup .upit .datumDo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+}
+
+#destinacija-popup .upit h5 {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+#destinacija-popup .upit button {
+  color: white;
+  font-size: 16px;
+  background-color: #005cc8;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 80px;
+}

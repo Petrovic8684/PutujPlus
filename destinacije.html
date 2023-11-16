@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/glavni.css" />
+    <link rel="stylesheet" href="styles/destinacije.css" />
     <link rel="stylesheet" href="styles/mobile-devices.css" />
+
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css" />
     <title>PutujPlus</title>
   </head>
   <body>
@@ -72,7 +76,7 @@
             </div>
             <div class="cena">
               <h3>589€</h3>
-              <a href="#">Rezerviši</a>
+              <a href="#destinacija-popup" class="open-popup-link">Rezerviši</a>
             </div>
           </div>
         </div>
@@ -104,7 +108,7 @@
             </div>
             <div class="cena">
               <h3>349€</h3>
-              <a href="#">Rezerviši</a>
+              <a href="#destinacija-popup" class="open-popup-link">Rezerviši</a>
             </div>
           </div>
         </div>
@@ -136,7 +140,7 @@
             </div>
             <div class="cena">
               <h3>1293€</h3>
-              <a href="#">Rezerviši</a>
+              <a href="#destinacija-popup" class="open-popup-link">Rezerviši</a>
             </div>
           </div>
         </div>
@@ -168,7 +172,7 @@
             </div>
             <div class="cena">
               <h3>630€</h3>
-              <a href="#">Rezerviši</a>
+              <a href="#destinacija-popup" class="open-popup-link">Rezerviši</a>
             </div>
           </div>
         </div>
@@ -200,7 +204,7 @@
             </div>
             <div class="cena">
               <h3>1719€</h3>
-              <a href="#">Rezerviši</a>
+              <a href="#destinacija-popup" class="open-popup-link">Rezerviši</a>
             </div>
           </div>
         </div>
@@ -232,7 +236,7 @@
             </div>
             <div class="cena">
               <h3>2099€</h3>
-              <a href="#">Rezerviši</a>
+              <a href="#destinacija-popup" class="open-popup-link">Rezerviši</a>
             </div>
           </div>
         </div>
@@ -264,7 +268,7 @@
             </div>
             <div class="cena">
               <h3>1649€</h3>
-              <a href="#">Rezerviši</a>
+              <a href="#destinacija-popup" class="open-popup-link">Rezerviši</a>
             </div>
           </div>
         </div>
@@ -296,7 +300,7 @@
             </div>
             <div class="cena">
               <h3>810€</h3>
-              <a href="#">Rezerviši</a>
+              <a href="#destinacija-popup" class="open-popup-link">Rezerviši</a>
             </div>
           </div>
         </div>
@@ -328,10 +332,39 @@
             </div>
             <div class="cena">
               <h3>219€</h3>
-              <a href="#">Rezerviši</a>
+              <a href="#destinacija-popup" class="open-popup-link">Rezerviši</a>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="destinacija-popup" class="white-popup mfp-hide">
+      <h1>Rezervacija putovanja</h1>
+      <div class="upit">
+        <div class="brOsoba">
+          <h4>Broj osoba:</h4>
+          <input
+            type="range"
+            min="1"
+            max="10"
+            value="1"
+            class="slider"
+            id="myRange"
+            onChange="prikaziOsobe()"
+          />
+          <h5 class="tekstOsobe">1</h5>
+        </div>
+        <div class="datumOd">
+          <h4>Datum od:</h4>
+          <input type="date" id="datumod" name="datumod" />
+        </div>
+        <div class="datumDo">
+          <h4>Datum do:</h4>
+          <input type="date" id="datumdo" name="datumdo" />
+        </div>
+        <h5 class="tekstZahvale"></h5>
+        <button onClick="zahvaliSe()">Rezerviši</button>
       </div>
     </div>
 
@@ -362,57 +395,70 @@
         Putujte s nama!
       </h5>
       <div class="futer-dno">
-        <div class="social">
-          <h4>Zapratite nas</h4>
-          <div class="ikonice">
-            <svg
-              class="w-6 h-6 text-gray-800 dark:text-white"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 8 19"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
-                clip-rule="evenodd"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 text-gray-800 dark:text-white"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fill="currentColor"
-                d="M12.186 8.672 18.743.947h-2.927l-5.005 5.9-4.44-5.9H0l7.434 9.876-6.986 8.23h2.927l5.434-6.4 4.82 6.4H20L12.186 8.672Zm-2.267 2.671L8.544 9.515 3.2 2.42h2.2l4.312 5.719 1.375 1.828 5.731 7.613h-2.2l-4.699-6.237Z"
-              />
-            </svg>
-            <svg
-              class="w-6 h-6 text-gray-800 dark:text-white"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 18 19"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M8.842 18.083a8.8 8.8 0 0 1-8.65-8.948 8.841 8.841 0 0 1 8.8-8.652h.153a8.464 8.464 0 0 1 5.7 2.257l-2.193 2.038A5.27 5.27 0 0 0 9.09 3.4a5.882 5.882 0 0 0-.2 11.76h.124a5.091 5.091 0 0 0 5.248-4.057L14.3 11H9V8h8.34c.066.543.095 1.09.088 1.636-.086 5.053-3.463 8.449-8.4 8.449l-.186-.002Z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </div>
-        </div>
         <div class="location">
           <h4>Kontakt</h4>
           <h5>Kneza Miloša 35, Beograd</h5>
           <h5>061/335-2478</h5>
         </div>
+        <div class="social">
+          <h4>Zapratite nas</h4>
+          <div class="ikonice">
+            <a href="https://www.facebook.com/login/">
+              <svg
+                class="w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 8 19"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+            <a href="https://twitter.com/i/flow/login">
+              <svg
+                class="w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12.186 8.672 18.743.947h-2.927l-5.005 5.9-4.44-5.9H0l7.434 9.876-6.986 8.23h2.927l5.434-6.4 4.82 6.4H20L12.186 8.672Zm-2.267 2.671L8.544 9.515 3.2 2.42h2.2l4.312 5.719 1.375 1.828 5.731 7.613h-2.2l-4.699-6.237Z"
+                />
+              </svg>
+            </a>
+            <a href="https://accounts.google.com/login">
+              <svg
+                class="w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 18 19"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8.842 18.083a8.8 8.8 0 0 1-8.65-8.948 8.841 8.841 0 0 1 8.8-8.652h.153a8.464 8.464 0 0 1 5.7 2.257l-2.193 2.038A5.27 5.27 0 0 0 9.09 3.4a5.882 5.882 0 0 0-.2 11.76h.124a5.091 5.091 0 0 0 5.248-4.057L14.3 11H9V8h8.34c.066.543.095 1.09.088 1.636-.086 5.053-3.463 8.449-8.4 8.449l-.186-.002Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
     <script src="js/burger.js"></script>
+
+    <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <!-- Magnific Popup core JS file -->
+    <script src="magnific-popup/jquery.magnific-popup.js"></script>
+    <script src="js/destinacije-popup.js"></script>
   </body>
 </html>

@@ -1,0 +1,81 @@
+.onama {
+  background-image: url("../slike/pozadine/onama.jpg");
+}
+
+.uspomene {
+  height: fit-content;
+}
+
+.uspomene .sadrzaj {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  margin: auto auto 100px auto;
+}
+
+.uspomene .sadrzaj .paragraf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+}
+
+.uspomene .sadrzaj .paragraf img {
+  border-radius: 500px;
+  width: 400px;
+  height: 500px;
+}
+
+.uspomene .sadrzaj .paragraf p,
+.kosmomi .sadrzaj p {
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.uspomene .sadrzaj .paragraf p svg {
+  width: 100px;
+  height: 100px;
+  max-height: 300px;
+  color: var(--plava);
+  position: absolute;
+}
+
+.uspomene .sadrzaj .paragraf p svg#gornji {
+  left: 250px;
+  bottom: -30px;
+  display: inline;
+}
+
+.uspomene .sadrzaj .paragraf p svg#donji {
+  top: 400px;
+  right: 260px;
+  display: inline;
+}
+
+.kosmomi {
+  height: fit-content;
+  margin-bottom: 150px;
+}
+
+.kosmomi .sadrzaj {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.kosmomi .sadrzaj img {
+  width: 846px;
+  height: 480px;
+  border-radius: 30px;
+}
+
+.kosmomi .sadrzaj p {
+  margin-inline: 150px;
+  height: fit-content;
+}

@@ -1,0 +1,150 @@
+.landing {
+  background-image: url("../slike/pozadine/pocetna.jpg");
+}
+
+.br-active {
+  display: block;
+}
+
+.razlozi .sadrzaj {
+  height: fit-content;
+  margin-bottom: 50px;
+  color: var(--siva);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+}
+
+.razlozi .sadrzaj img {
+  border-radius: 500px;
+  display: inline;
+}
+
+.razlozi .sadrzaj img#prva {
+  width: 350px;
+  height: 510px;
+
+  position: relative;
+  right: 40px;
+  bottom: 50px;
+  z-index: -1;
+}
+
+.razlozi .sadrzaj img#druga {
+  width: 280px;
+  height: 420px;
+  position: relative;
+  top: 30px;
+  right: -30px;
+  border: 10px solid white;
+}
+
+.razlozi .sadrzaj .sekcije .sekcija {
+  margin-bottom: 25px;
+}
+
+.razlozi .sadrzaj .sekcije .sekcija > * {
+  margin-bottom: 10px;
+}
+
+.razlozi .sadrzaj .sekcije .sekcija h3 {
+  color: white;
+  padding: 3px 7px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+}
+
+.razlozi .sadrzaj .sekcije .sekcija h4 {
+  font-size: 25px;
+  color: var(--siva);
+}
+
+.razlozi .sadrzaj .sekcije .sekcija h5 {
+  font-size: 16px;
+  font-weight: 300;
+  max-width: 600px;
+  color: var(--siva);
+}
+
+.razlozi .sadrzaj .sekcije .sekcija #prvi {
+  background-color: var(--zelena);
+}
+
+.razlozi .sadrzaj .sekcije .sekcija #drugi {
+  background-color: var(--plava);
+}
+
+.razlozi .sadrzaj .sekcije .sekcija #treci {
+  background-color: var(--roze);
+}
+
+.iskazi {
+  width: 80%;
+  height: fit-content;
+  margin: auto auto 100px auto;
+  color: var(--siva);
+}
+
+.iskazi h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 100px;
+}
+
+.iskazi .sekcije {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.iskazi .sekcije .sekcija {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  padding: 20px 50px 50px 50px;
+  border-radius: 30px;
+  background-color: rgb(226, 232, 240);
+  position: relative;
+}
+
+.iskazi .sekcije .sekcija .gore {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.iskazi .sekcije .sekcija .gore .slika img {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+}
+
+.iskazi .sekcije .sekcija .gore .slika svg {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -50px;
+  right: 30px;
+}
+
+.iskazi .sekcije .sekcija .gore .podaci {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+}
+
+.iskazi .sekcije .sekcija .gore .podaci h4 {
+  font-size: 26px;
+}
+
+.iskazi .sekcije .sekcija .gore .podaci h5,
+.iskazi .sekcije .sekcija .dole p {
+  font-size: 18px;
+  font-weight: 300;
+}

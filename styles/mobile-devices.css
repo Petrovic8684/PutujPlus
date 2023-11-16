@@ -131,8 +131,13 @@
     flex-direction: column;
   }
 
-  .futer .futer-dno .social {
+  .futer .futer-dno .social,
+  .futer .futer-dno .location {
     margin-bottom: 40px;
+  }
+
+  .forma form {
+    width: 100%;
   }
 }
 
@@ -145,5 +150,16 @@
   .uspomene .sadrzaj .paragraf img {
     width: 80vw;
     height: 100vw;
+  }
+
+  .white-popup {
+    margin: 20px;
+  }
+
+  #destinacija-popup .upit .brOsoba,
+  #destinacija-popup .upit .datumOd,
+  #destinacija-popup .upit .datumDo {
+    justify-content: space-around;
+    width: 100%;
   }
 }
