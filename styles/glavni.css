@@ -22,6 +22,12 @@ html {
 body {
   height: 100vh;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+body.mfp-zoom-out-cur {
+  overflow: hidden;
+  -webkit-overflow-scrolling: auto;
 }
 
 .disableYScroll {
