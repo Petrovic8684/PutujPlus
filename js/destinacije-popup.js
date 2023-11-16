@@ -22,6 +22,10 @@ $(".open-popup-link").magnificPopup({
   callbacks: {
     open: function () {
       resetujTekstZahvale();
+      document.body.classList.add("disableYScroll");
+    },
+    close: function () {
+      document.body.classList.remove("disableYScroll");
     },
   },
 });
